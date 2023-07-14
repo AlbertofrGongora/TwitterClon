@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Twitus</h1>
+
+<div id="tweets">
+  <% @tweets.each do |tweet| %>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= tweet.userName %></h5>
+        <p class="card-text"><%= tweet.description %></p>
+        <%= link_to "Ver tweet", tweet, class: "btn btn-primary" %>
+      </div>
+    </div>
+    <br>
+  <% end %>
+</div>
+
+<div class="container">
+  <%== pagy_bootstrap_nav(@pagy) if @pagy.pages > 1 %>
+</div>
+

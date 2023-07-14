@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tweet %>
+
+<div>
+  <%= link_to "Editar este Twitus", edit_tweet_path(@tweet),class: "btn btn-success" %> |
+  <%= link_to "Volver a Twitus", tweets_path ,class: "btn btn-success"%>
+ 
+
+</div>
+<br>
+<div>
+  <%= button_to "Eliminar twitus", @tweet, method: :delete, class: "btn btn-danger" %>
+</div>
