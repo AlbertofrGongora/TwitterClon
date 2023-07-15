@@ -4,7 +4,7 @@ Clon de Twitter con Ruby on Rails
 
 ## Descripción
 
-Clon de Twitter con Ruby on Rails, para el Bootcamp
+El siguiente proyecto es Twitus un clon de twitter realizado para el bootcamp DESARROLLO RUBY ON RAILS PARA EMPRENDIMIENTOS DE TIPO STARTUP
 
 ## Visuales
 
@@ -18,25 +18,46 @@ Estas instrucciones te guiarán para obtener una copia de este proyecto en funci
 
 Lista de software y herramientas, incluyendo versiones, que necesitas para instalar y ejecutar este proyecto:
 
-- Sistema Operativo (por ejemplo, Ubuntu 20.04, Windows 10)
-- Lenguaje de programación (por ejemplo, Python 3.8)
-- Framework (por ejemplo, Django 3.1)
-- Base de datos (por ejemplo, PostgreSQL 12)
-- Otros...
+- Ruby (versión X.X.X)
+- Ruby on Rails (versión X.X.X)
+- PostgreSQL (versión X.X.X)
+- Git Hub
+- Heroku CLI
+
 
 ### Instalación 🔧
 
 Una guía paso a paso sobre cómo configurar el entorno de desarrollo e instalar todas las dependencias.
 
 ```bash
-# paso 1
-```
+1. Clona este repositorio en tu máquina local utilizando el siguiente comando de Git: 
 
-Y así sucesivamente...
+```
 
 ```bash
-# paso 2
+2. Accede al directorio del proyecto:
+cd 
 ```
+
+```bash
+3. Instala las dependencias de Ruby especificadas en el archivo Gemfile ejecutando el siguiente comando:
+bundle install
+```
+
+```bash
+4. Configura la base de datos PostgreSQL en el archivo config/database.yml.
+```
+
+```bash
+5. Crea la base de datos ejecutando el siguiente comando:
+rails db:create
+```
+
+```bash
+6. Realiza las migraciones de la base de datos ejecutando el siguiente comando:
+rails db:migrate
+```
+
 
 ## Ejecutando las Pruebas ⚙️
 
@@ -60,7 +81,9 @@ Descripción y ejemplos de las pruebas de estilo que estás utilizando.
 
 ## Despliegue 📦
 
-Instrucciones sobre cómo desplegar esto en un sistema en vivo o ambiente de producción.
+Para ejecutar el proyecto de forma local, utiliza el siguiente comando: rails server
+Esto iniciará el servidor de desarrollo y podrás acceder a la aplicación en http://localhost:3000.
+
 
 ## Construido Con 🛠️
 
@@ -96,7 +119,7 @@ Usamos [Git](https://git-scm.com) para el versionado. Para las versiones disponi
 
 ## Autores ✒️
 
-- **Brayan Diaz C** - _Trabajo inicial_ - [Brayan Diaz C](https://github.com/brayandiazc)
+- Alberto Góngora Barrera - _Trabajo inicial_ - [AlbertofrGongora](https://github.com/AlbertofrGongora)
 
 Mira también la lista de [contribuidores](https://github.com/your/project/contributors) que han participado en este proyecto.
 
