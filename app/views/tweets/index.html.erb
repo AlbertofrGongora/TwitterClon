@@ -3,7 +3,7 @@
 <h1>Twitus</h1>
 
 <div id="tweets">
-  <table id="example">
+  <table id="tabla">
     <thead>
       <tr>
         <th>Nombre de usuario</th>
@@ -24,10 +24,29 @@
 </div>
 
 <script>
-  $(document).ready(function() {
-    $('#example').DataTable();
+$(document).ready(function(){
+  $('#tabla').DataTable( {
+      "language": {
+          "lengthMenu": "Mostrar _MENU_ entradas",
+          "zeroRecords": "No se encontraron registros",
+          "info": "Mostrando página _PAGE_ de _PAGES_",
+          "infoEmpty": "No records available",
+          "infoFiltered": "(filtered from _MAX_ total records)",
+          "sSearch":"Buscar",
+          "oPaginate":{
+            "sFirst": "Primero",
+            "sLast": "Último",
+            "sNext": "Siguiente",
+            "sPrevious": "Anterior"
+        }
+      },
+      "lengthMenu": false, // Oculta el mostrador de entradas
+      "paging": false // Desactiva el paginado
   });
+});
+
 </script>
+
 </div>
 <div class="container">
   <div class="row justify-content-end">
