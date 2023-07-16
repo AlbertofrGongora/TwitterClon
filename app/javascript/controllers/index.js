@@ -11,22 +11,4 @@ eagerLoadControllersFrom("controllers", application)
 // lazyLoadControllersFrom("controllers", application)
 
 // tabla - config
-$(document).ready(function(){
-  //alert('documento listo');
-  $('#example').DataTable( {
-      "language": {
-          "lengthMenu": "Mostrar _MENU_ entradas",
-          "zeroRecords": "No se encontraron registros",
-          "info": "Mostrando página _PAGE_ de _PAGES_",
-          "infoEmpty": "No records available",
-          "infoFiltered": "(filtered from _MAX_ total records)",
-          "sSearch":"Buscar",
-          "oPaginate":{
-            "sFirst": "Primero",
-            "sLast": "Último",
-            "sNext": "Siguiente",
-            "sPrevious": "Anterior"
-        }
-      }
-  } );
-})
+
