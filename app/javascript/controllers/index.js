@@ -11,43 +11,22 @@ eagerLoadControllersFrom("controllers", application)
 // lazyLoadControllersFrom("controllers", application)
 
 // tabla - config
-$(document).ready(function() {
-  // Inicializar DataTables solo una vez
-  if (!$.fn.DataTable.isDataTable('#example')) {
-    initializeDataTables();
-  }
-
-  // Capturar evento beforeunload para guardar el estado de DataTables
-  $(window).on('beforeunload', function() {
-    var dtState = $('#example').DataTable().state();
-    localStorage.setItem('dtConfig', JSON.stringify(dtState));
-  });
-
-  // Restaurar configuraciones de DataTables al cargar la página
-  var storedConfig = localStorage.getItem('dtConfig');
-  if (storedConfig) {
-    var dtState = JSON.parse(storedConfig);
-    $('#example').DataTable().state.clear(); // Limpiar estado actual
-    $('#example').DataTable().state.load(dtState); // Cargar estado guardado
-  }
-});
-
-function initializeDataTables() {
-  $('#example').DataTable({
-    "paging": false,
-    "language": {
-      "lengthMenu": "Mostrar _MENU_ entradas de Twitus",
-      "zeroRecords": "No se encontraron registros",
-      "info": "",
-      "infoEmpty": "No hay registros disponibles",
-      "infoFiltered": "(filtrado de un total de _MAX_ registros)",
-      "sSearch": "Buscar",
-      "oPaginate": {
-        "sFirst": "Primero",
-        "sLast": "Último",
-        "sNext": "Siguiente",
-        "sPrevious": "Anterior"
+$(document).ready(function(){
+  //alert('documento listo');
+  $('#example').DataTable( {
+      "language": {
+          "lengthMenu": "Mostrar _MENU_ entradas",
+          "zeroRecords": "No se encontraron registros",
+          "info": "Mostrando página _PAGE_ de _PAGES_",
+          "infoEmpty": "No records available",
+          "infoFiltered": "(filtered from _MAX_ total records)",
+          "sSearch":"Buscar",
+          "oPaginate":{
+            "sFirst": "Primero",
+            "sLast": "Último",
+            "sNext": "Siguiente",
+            "sPrevious": "Anterior"
+        }
       }
-    }
-  });
-}
+  } );
+})
